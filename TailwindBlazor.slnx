@@ -2,6 +2,9 @@
   <Folder Name="/samples/">
     <Project Path="samples/SampleBlazorApp/SampleBlazorApp.csproj" />
   </Folder>
+  <Folder Name="/site/">
+    <Project Path="site/Site.csproj" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/TailwindBlazor/TailwindBlazor.csproj" />
   </Folder>
