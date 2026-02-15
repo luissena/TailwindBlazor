@@ -48,8 +48,20 @@
 
 <body class="bg-[#09090b] text-gray-100 antialiased">
     <div id="app">
-        <!-- Fallback content for crawlers -->
-        <article>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;gap:1.5rem">
+            <img src="logo.png" alt="" style="height:2.5rem;opacity:0;animation:fadeIn .4s ease-out .1s forwards" />
+            <div style="display:flex;gap:.35rem;opacity:0;animation:fadeIn .4s ease-out .3s forwards">
+                <span style="width:.375rem;height:.375rem;border-radius:50%;background:#a1a1aa;animation:pulse 1.2s ease-in-out infinite"></span>
+                <span style="width:.375rem;height:.375rem;border-radius:50%;background:#a1a1aa;animation:pulse 1.2s ease-in-out .2s infinite"></span>
+                <span style="width:.375rem;height:.375rem;border-radius:50%;background:#a1a1aa;animation:pulse 1.2s ease-in-out .4s infinite"></span>
+            </div>
+        </div>
+        <style>
+            @keyframes pulse{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:1;transform:scale(1)}}
+            @keyframes fadeIn{to{opacity:1}}
+        </style>
+        <!-- SEO fallback: visually hidden, accessible to crawlers -->
+        <article style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">
             <h1>TailwindBlazor</h1>
             <p>Zero-config Tailwind CSS v4 integration for Blazor.</p>
             <p>Auto-downloads the CLI. Compiles CSS at build time. Runs watch mode in dev. One package, one line of code.</p>
