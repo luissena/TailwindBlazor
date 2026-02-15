@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://www.nuget.org/packages/TailwindBlazor"><img src="https://img.shields.io/nuget/v/TailwindBlazor?color=f59e0b&label=NuGet" alt="NuGet" /></a>
-  <a href="https://www.nuget.org/packages/TailwindBlazor"><img src="https://img.shields.io/nuget/dt/TailwindBlazor?color=f59e0b&label=Downloads" alt="NuGet Downloads" /></a>
-  <a href="https://tailwind-blazor.com"><img src="https://img.shields.io/badge/Docs-tailwind--blazor.com-f59e0b" alt="Docs" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/luissena/TailwindBlazor?color=f59e0b" alt="MIT License" /></a>
+  <a href="https://www.nuget.org/packages/TailwindBlazor"><img src="https://img.shields.io/nuget/v/TailwindBlazor?color=8b5cf6&label=NuGet" alt="NuGet" /></a>
+  <a href="https://www.nuget.org/packages/TailwindBlazor"><img src="https://img.shields.io/nuget/dt/TailwindBlazor?color=8b5cf6&label=Downloads" alt="NuGet Downloads" /></a>
+  <a href="https://tailwind-blazor.com"><img src="https://img.shields.io/badge/Docs-tailwind--blazor.com-8b5cf6" alt="Docs" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/luissena/TailwindBlazor?color=8b5cf6" alt="MIT License" /></a>
 </p>
 
 <p align="center">
