@@ -1,8 +1,28 @@
-# TailwindBlazor
+<p align="center">
+  <img src="samples/SampleBlazorApp/wwwroot/logo.png" alt="TailwindBlazor" width="64" height="64" />
+</p>
 
-Zero-config [Tailwind CSS v4](https://tailwindcss.com/) integration for Blazor.
+<h1 align="center">TailwindBlazor</h1>
 
-`dotnet add package TailwindBlazor` — that's it. The CLI downloads automatically, CSS compiles at build time, and watch mode runs in development.
+<p align="center">
+  Zero-config <a href="https://tailwindcss.com/">Tailwind CSS v4</a> integration for Blazor.
+</p>
+
+<p align="center">
+  <a href="https://www.nuget.org/packages/TailwindBlazor"><img src="https://img.shields.io/nuget/v/TailwindBlazor?color=f59e0b&label=NuGet" alt="NuGet" /></a>
+  <a href="https://www.nuget.org/packages/TailwindBlazor"><img src="https://img.shields.io/nuget/dt/TailwindBlazor?color=f59e0b&label=Downloads" alt="NuGet Downloads" /></a>
+  <a href="https://tailwind-blazor.com"><img src="https://img.shields.io/badge/Docs-tailwind--blazor.com-f59e0b" alt="Docs" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/luissena/TailwindBlazor?color=f59e0b" alt="MIT License" /></a>
+</p>
+
+<p align="center">
+  <code>dotnet add package TailwindBlazor</code> — that's it.<br/>
+  The CLI downloads automatically, CSS compiles at build time, and watch mode runs in development.
+</p>
+
+<p align="center">
+  <a href="https://tailwind-blazor.com">Website</a> · <a href="https://tailwind-blazor.com/docs">Docs</a> · <a href="https://www.nuget.org/packages/TailwindBlazor">NuGet</a>
+</p>
 
 ## Features
 
@@ -107,6 +127,12 @@ Or via `appsettings.json`:
 | Windows | x64 |
 | macOS | x64, ARM64 |
 | Linux | x64, ARM64 |
+
+## Links
+
+- [Website & Docs](https://tailwind-blazor.com)
+- [NuGet Package](https://www.nuget.org/packages/TailwindBlazor)
+- [GitHub](https://github.com/luissena/TailwindBlazor)
 
 ## License
 
