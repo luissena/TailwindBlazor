@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="dark">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zero-config Tailwind CSS v4 integration for Blazor. Auto CLI download, build-time CSS, watch mode." />
+    <meta property="og:title" content="TailwindBlazor" />
+    <meta property="og:description" content="Zero-config Tailwind CSS v4 integration for Blazor" />
+    <meta property="og:type" content="website" />
     <base href="/" />
     <ResourcePreloader />
     <link rel="stylesheet" href="css/tailwind.css" />
@@ -12,7 +16,7 @@
     <HeadOutlet />
 </head>
 
-<body>
+<body class="bg-[#09090b] text-gray-100 antialiased">
     <Routes />
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>

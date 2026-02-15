@@ -1,25 +1,9 @@
 @inherits LayoutComponentBase
 
-<div class="flex flex-col min-h-screen md:flex-row">
-    <aside class="bg-gradient-to-b from-[#052767] to-[#3a0647] md:w-64 md:sticky md:top-0 md:h-screen">
-        <NavMenu />
-    </aside>
-
-    <main class="flex-1">
-        <header class="sticky top-0 z-10 flex items-center justify-end h-14 px-6 bg-gray-100 border-b border-gray-300">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank"
-               class="text-blue-600 hover:underline">About</a>
-        </header>
-
-        <article class="p-6">
-            @Body
-        </article>
+<div class="min-h-screen bg-[#09090b] text-gray-100">
+    <NavMenu />
+    <main>
+        @Body
     </main>
-</div>
-
-<div id="blazor-error-ui" data-nosnippet
-     class="fixed bottom-0 left-0 w-full hidden bg-yellow-100 px-5 py-3 shadow-[0_-1px_2px_rgba(0,0,0,0.2)] z-[1000]">
-    An unhandled error has occurred.
-    <a href="." class="text-blue-600 hover:underline">Reload</a>
-    <span class="absolute right-3 top-2 cursor-pointer">&#x1F5D9;</span>
+    <Footer />
 </div>
