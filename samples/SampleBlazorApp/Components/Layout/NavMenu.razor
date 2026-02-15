@@ -1,39 +1,23 @@
-<div class="flex items-center h-14 px-4 bg-black/40">
-    <a class="text-white font-semibold text-lg" href="">SampleBlazorApp</a>
-</div>
-
-<input type="checkbox" title="Navigation menu" id="nav-toggle" class="peer hidden md:hidden" />
-<label for="nav-toggle"
-       class="absolute top-2 right-4 w-14 h-10 flex items-center justify-center rounded border border-white/10 bg-white/10 cursor-pointer md:hidden">
-    <svg class="w-5 h-5 text-white/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-</label>
-
-<nav class="hidden peer-checked:block md:block md:h-[calc(100vh-3.5rem)] md:overflow-y-auto">
-    <div class="flex flex-col py-4">
-        <NavLink class="flex items-center h-12 px-4 mx-3 rounded text-gray-300 hover:bg-white/10 hover:text-white [&.active]:bg-white/[.37] [&.active]:text-white"
-                 href="" Match="NavLinkMatch.All">
-            <svg class="w-5 h-5 mr-3 shrink-0" fill="white" viewBox="0 0 16 16">
-                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
-            </svg>
-            Home
+<nav class="sticky top-0 z-50 border-b border-white/[0.06] bg-[#09090b]/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <NavLink href="" Match="NavLinkMatch.All" class="flex items-center gap-2 text-lg font-semibold tracking-tight text-white no-underline">
+            <img src="logo.png" alt="TailwindBlazor" class="w-8 h-8 invert" />
+            TailwindBlazor
         </NavLink>
 
-        <NavLink class="flex items-center h-12 px-4 mx-3 rounded text-gray-300 hover:bg-white/10 hover:text-white [&.active]:bg-white/[.37] [&.active]:text-white"
-                 href="counter">
-            <svg class="w-5 h-5 mr-3 shrink-0" fill="white" viewBox="0 0 16 16">
-                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
-            </svg>
-            Counter
-        </NavLink>
-
-        <NavLink class="flex items-center h-12 px-4 mx-3 rounded text-gray-300 hover:bg-white/10 hover:text-white [&.active]:bg-white/[.37] [&.active]:text-white"
-                 href="weather">
-            <svg class="w-5 h-5 mr-3 shrink-0" fill="white" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
-            </svg>
-            Weather
-        </NavLink>
+        <div class="flex items-center gap-1">
+            <NavLink href="" Match="NavLinkMatch.All"
+                     class="px-3 py-1.5 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/[0.06] transition-colors no-underline">
+                Home
+            </NavLink>
+            <NavLink href="docs"
+                     class="px-3 py-1.5 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/[0.06] transition-colors no-underline">
+                Docs
+            </NavLink>
+            <a href="https://github.com/luissena/TailwindBlazor" target="_blank" rel="noopener"
+               class="ml-2 p-2 text-gray-400 hover:text-white rounded-lg hover:bg-white/[0.06] transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+        </div>
     </div>
 </nav>
