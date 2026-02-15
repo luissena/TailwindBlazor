@@ -10,16 +10,16 @@
 
 <!-- Hero -->
 <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(251,191,36,0.08),transparent_70%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(167,139,250,0.08),transparent_70%)]"></div>
 
     <div class="relative max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto px-6 pt-20 pb-16 sm:pt-28 sm:pb-24 lg:pt-36 lg:pb-32 text-center">
-        <span class="inline-block px-3 py-1 text-xs font-mono font-medium text-amber-400/80 border border-amber-400/20 rounded-full mb-8 tracking-wider uppercase">
+        <span class="inline-block px-3 py-1 text-xs font-mono font-medium text-violet-400/80 border border-violet-400/20 rounded-full mb-8 tracking-wider uppercase">
             v0.1.0 &middot; Tailwind CSS v4
         </span>
 
         <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1] mb-6">
             Tailwind CSS for
-            <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">Blazor</span>,
+            <span class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Blazor</span>,
             <br class="hidden sm:block" />zero&#8209;config
         </h1>
 
@@ -30,11 +30,11 @@
 
         <!-- Install command -->
         <div class="flex justify-center mb-6">
-            <div class="group relative flex items-center gap-3 px-5 py-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:border-amber-400/30 transition-colors cursor-pointer"
+            <div class="group relative flex items-center gap-3 px-5 py-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:border-violet-400/30 transition-colors cursor-pointer"
                  @onclick="CopyInstallCommand">
                 <span class="text-gray-500 font-mono text-sm select-none">$</span>
                 <code class="font-mono text-sm sm:text-base text-gray-200 tracking-tight">dotnet add package TailwindBlazor</code>
-                <button class="ml-1 p-1 rounded-md text-gray-500 hover:text-amber-400 transition-colors" aria-label="Copy">
+                <button class="ml-1 p-1 rounded-md text-gray-500 hover:text-violet-400 transition-colors" aria-label="Copy">
                     @if (_copied)
                     {
                         <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="flex justify-center gap-4">
-            <a href="/docs" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-amber-400 text-gray-900 rounded-lg hover:bg-amber-300 transition-colors">
+            <a href="/docs" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-violet-400 text-gray-900 rounded-lg hover:bg-violet-300 transition-colors">
                 Get Started
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
             </a>
@@ -71,8 +71,8 @@
     <div class="space-y-6">
         <!-- Step 1 -->
         <div class="flex gap-5">
-            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center">
-                <span class="text-sm font-bold text-amber-400">1</span>
+            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-violet-400/10 flex items-center justify-center">
+                <span class="text-sm font-bold text-violet-400">1</span>
             </div>
             <div class="flex-1 min-w-0">
                 <h3 class="text-base font-semibold mb-3">Install the package</h3>
@@ -90,8 +90,8 @@
 
         <!-- Step 2 -->
         <div class="flex gap-5">
-            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center">
-                <span class="text-sm font-bold text-amber-400">2</span>
+            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-violet-400/10 flex items-center justify-center">
+                <span class="text-sm font-bold text-violet-400">2</span>
             </div>
             <div class="flex-1 min-w-0">
                 <h3 class="text-base font-semibold mb-3">Create your CSS entry point</h3>
@@ -109,8 +109,8 @@
 
         <!-- Step 3 -->
         <div class="flex gap-5">
-            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-400/10 flex items-center justify-center">
-                <span class="text-sm font-bold text-amber-400">3</span>
+            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-violet-400/10 flex items-center justify-center">
+                <span class="text-sm font-bold text-violet-400">3</span>
             </div>
             <div class="flex-1 min-w-0">
                 <h3 class="text-base font-semibold mb-3">Register the service and reference the CSS</h3>
@@ -124,7 +124,7 @@
                     <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm"><span class="text-violet-400">using</span> <span class="text-gray-200">TailwindBlazor</span>;
 
 <span class="text-violet-400">var</span> builder = WebApplication.<span class="text-blue-400">CreateBuilder</span>(args);
-builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
+builder.<span class="text-violet-400">UseTailwind</span>();</code></pre>
                 </div>
                 <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] overflow-hidden mt-3">
                     <div class="flex items-center gap-2 px-4 py-2 border-b border-white/[0.04]">
@@ -133,15 +133,15 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                         <span class="w-2 h-2 rounded-full bg-white/10"></span>
                         <span class="ml-2 text-[11px] text-gray-500 font-mono">App.razor</span>
                     </div>
-                    <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm"><span class="text-gray-500">&lt;</span><span class="text-red-400">link</span> <span class="text-amber-400">rel</span>=<span class="text-green-400">"stylesheet"</span> <span class="text-amber-400">href</span>=<span class="text-green-400">"css/tailwind.css"</span> <span class="text-gray-500">/&gt;</span></code></pre>
+                    <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm"><span class="text-gray-500">&lt;</span><span class="text-red-400">link</span> <span class="text-violet-400">rel</span>=<span class="text-green-400">"stylesheet"</span> <span class="text-violet-400">href</span>=<span class="text-green-400">"css/tailwind.css"</span> <span class="text-gray-500">/&gt;</span></code></pre>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="mt-10 p-5 rounded-xl bg-amber-400/[0.06] border border-amber-400/[0.12]">
+    <div class="mt-10 p-5 rounded-xl bg-violet-400/[0.06] border border-violet-400/[0.12]">
         <p class="text-sm text-gray-300">
-            <span class="font-semibold text-amber-400">That's it.</span>
+            <span class="font-semibold text-violet-400">That's it.</span>
             Run <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-white/[0.06]">dotnet build</code> and the CLI
             downloads automatically, generates your CSS. In dev,
             <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-white/[0.06]">dotnet watch</code> starts watch mode
@@ -158,53 +158,53 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
     </div>
 
     <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6">
-        <div class="p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-400/20 transition-colors">
-            <div class="w-10 h-10 rounded-xl bg-amber-400/10 flex items-center justify-center mb-5">
-                <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        <div class="p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-violet-400/20 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-violet-400/10 flex items-center justify-center mb-5">
+                <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
             </div>
             <h3 class="text-lg font-semibold mb-2">Auto CLI Download</h3>
             <p class="text-sm text-gray-400 leading-relaxed">
                 Detects your OS and architecture, downloads the correct Tailwind CLI binary,
-                and caches it at <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">~/.tailwindblazor/cli/</code>.
+                and caches it at <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">~/.tailwindblazor/cli/</code>.
                 Subsequent builds skip the download.
             </p>
         </div>
 
-        <div class="p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-400/20 transition-colors">
-            <div class="w-10 h-10 rounded-xl bg-amber-400/10 flex items-center justify-center mb-5">
-                <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25"/></svg>
+        <div class="p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-violet-400/20 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-violet-400/10 flex items-center justify-center mb-5">
+                <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25"/></svg>
             </div>
             <h3 class="text-lg font-semibold mb-2">MSBuild Integration</h3>
             <p class="text-sm text-gray-400 leading-relaxed">
                 CSS generation happens at build time through native MSBuild targets. Works with
-                <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet build</code>,
-                <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet publish</code>,
+                <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet build</code>,
+                <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet publish</code>,
                 and your IDE.
             </p>
         </div>
 
-        <div class="p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-400/20 transition-colors">
-            <div class="w-10 h-10 rounded-xl bg-amber-400/10 flex items-center justify-center mb-5">
-                <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <div class="p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-violet-400/20 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-violet-400/10 flex items-center justify-center mb-5">
+                <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
             <h3 class="text-lg font-semibold mb-2">Watch Mode</h3>
             <p class="text-sm text-gray-400 leading-relaxed">
                 A hosted service runs
-                <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">tailwindcss --watch</code>
-                in development. Edit a <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">.razor</code> file,
+                <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">tailwindcss --watch</code>
+                in development. Edit a <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">.razor</code> file,
                 CSS updates instantly.
             </p>
         </div>
 
-        <div class="p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-amber-400/20 transition-colors">
-            <div class="w-10 h-10 rounded-xl bg-amber-400/10 flex items-center justify-center mb-5">
-                <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <div class="p-7 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-violet-400/20 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-violet-400/10 flex items-center justify-center mb-5">
+                <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
             <h3 class="text-lg font-semibold mb-2">Fully Configurable</h3>
             <p class="text-sm text-gray-400 leading-relaxed">
                 Sensible defaults that work immediately. Override input/output paths, CLI version, or
                 minification via MSBuild properties, C# options, or
-                <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">appsettings.json</code>.
+                <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">appsettings.json</code>.
             </p>
         </div>
     </div>
@@ -239,7 +239,7 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
     <p class="text-gray-400 text-base sm:text-lg mb-10 max-w-lg mx-auto">
         Add the package, write one line of C#, use Tailwind classes in your Blazor components.
     </p>
-    <a href="/docs" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium bg-amber-400 text-gray-900 rounded-lg hover:bg-amber-300 transition-colors">
+    <a href="/docs" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium bg-violet-400 text-gray-900 rounded-lg hover:bg-violet-300 transition-colors">
         Read the Docs
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
     </a>

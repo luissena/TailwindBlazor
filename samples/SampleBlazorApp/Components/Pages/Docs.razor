@@ -40,7 +40,7 @@
 
                 <h3 class="text-lg font-semibold mb-3">2. Create the CSS entry point</h3>
                 <p class="text-sm text-gray-400 mb-3">
-                    Create a file at <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">Styles/app.css</code> in your project root:
+                    Create a file at <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">Styles/app.css</code> in your project root:
                 </p>
                 <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] overflow-hidden mb-6">
                     <div class="flex items-center gap-2 px-4 py-2 border-b border-white/[0.04]">
@@ -54,7 +54,7 @@
 
                 <h3 class="text-lg font-semibold mb-3">3. Register the service</h3>
                 <p class="text-sm text-gray-400 mb-3">
-                    Add one line to your <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">Program.cs</code>:
+                    Add one line to your <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">Program.cs</code>:
                 </p>
                 <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] overflow-hidden mb-6">
                     <div class="flex items-center gap-2 px-4 py-2 border-b border-white/[0.04]">
@@ -66,12 +66,12 @@
                     <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm"><span class="text-violet-400">using</span> TailwindBlazor;
 
 <span class="text-violet-400">var</span> builder = WebApplication.<span class="text-blue-400">CreateBuilder</span>(args);
-builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
+builder.<span class="text-violet-400">UseTailwind</span>();</code></pre>
                 </div>
 
                 <h3 class="text-lg font-semibold mb-3">4. Reference the generated CSS</h3>
                 <p class="text-sm text-gray-400 mb-3">
-                    Add the stylesheet link in your <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">App.razor</code> or <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">_Host.cshtml</code>:
+                    Add the stylesheet link in your <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">App.razor</code> or <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">_Host.cshtml</code>:
                 </p>
                 <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] overflow-hidden mb-6">
                     <div class="flex items-center gap-2 px-4 py-2 border-b border-white/[0.04]">
@@ -80,7 +80,7 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                         <span class="w-2 h-2 rounded-full bg-white/10"></span>
                         <span class="ml-2 text-[11px] text-gray-500 font-mono">App.razor</span>
                     </div>
-                    <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm"><span class="text-gray-500">&lt;</span><span class="text-red-400">link</span> <span class="text-amber-400">rel</span>=<span class="text-green-400">"stylesheet"</span> <span class="text-amber-400">href</span>=<span class="text-green-400">"css/tailwind.css"</span> <span class="text-gray-500">/&gt;</span></code></pre>
+                    <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm"><span class="text-gray-500">&lt;</span><span class="text-red-400">link</span> <span class="text-violet-400">rel</span>=<span class="text-green-400">"stylesheet"</span> <span class="text-violet-400">href</span>=<span class="text-green-400">"css/tailwind.css"</span> <span class="text-gray-500">/&gt;</span></code></pre>
                 </div>
 
                 <h3 class="text-lg font-semibold mb-3">5. Use Tailwind classes</h3>
@@ -91,7 +91,7 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                         <span class="w-2 h-2 rounded-full bg-white/10"></span>
                         <span class="ml-2 text-[11px] text-gray-500 font-mono">Home.razor</span>
                     </div>
-                    <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm"><span class="text-gray-500">&lt;</span><span class="text-red-400">h1</span> <span class="text-amber-400">class</span>=<span class="text-green-400">"text-3xl font-bold text-gray-900"</span><span class="text-gray-500">&gt;</span>
+                    <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm"><span class="text-gray-500">&lt;</span><span class="text-red-400">h1</span> <span class="text-violet-400">class</span>=<span class="text-green-400">"text-3xl font-bold text-gray-900"</span><span class="text-gray-500">&gt;</span>
     Hello, TailwindBlazor!
 <span class="text-gray-500">&lt;/</span><span class="text-red-400">h1</span><span class="text-gray-500">&gt;</span></code></pre>
                 </div>
@@ -109,7 +109,7 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                 <div id="msbuild-properties" class="mb-12">
                     <h3 class="text-xl font-semibold mb-4">MSBuild Properties</h3>
                     <p class="text-sm text-gray-400 mb-4">
-                        Set these in your <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">.csproj</code> to control build-time behavior:
+                        Set these in your <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">.csproj</code> to control build-time behavior:
                     </p>
                     <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] overflow-hidden mb-6">
                         <div class="flex items-center gap-2 px-4 py-2 border-b border-white/[0.04]">
@@ -138,27 +138,27 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                             </thead>
                             <tbody class="font-mono text-xs">
                                 <tr class="border-b border-white/[0.04]">
-                                    <td class="py-3 pr-6 text-amber-400/70">TailwindVersion</td>
+                                    <td class="py-3 pr-6 text-violet-400/70">TailwindVersion</td>
                                     <td class="py-3 pr-6 text-gray-400">4.1.18</td>
                                     <td class="py-3 text-gray-400 font-sans text-sm">Tailwind CLI version to download</td>
                                 </tr>
                                 <tr class="border-b border-white/[0.04]">
-                                    <td class="py-3 pr-6 text-amber-400/70">TailwindInputFile</td>
+                                    <td class="py-3 pr-6 text-violet-400/70">TailwindInputFile</td>
                                     <td class="py-3 pr-6 text-gray-400">Styles/app.css</td>
                                     <td class="py-3 text-gray-400 font-sans text-sm">CSS entry point relative to project root</td>
                                 </tr>
                                 <tr class="border-b border-white/[0.04]">
-                                    <td class="py-3 pr-6 text-amber-400/70">TailwindOutputFile</td>
+                                    <td class="py-3 pr-6 text-violet-400/70">TailwindOutputFile</td>
                                     <td class="py-3 pr-6 text-gray-400">wwwroot/css/tailwind.css</td>
                                     <td class="py-3 text-gray-400 font-sans text-sm">Generated CSS output path</td>
                                 </tr>
                                 <tr class="border-b border-white/[0.04]">
-                                    <td class="py-3 pr-6 text-amber-400/70">TailwindEnabled</td>
+                                    <td class="py-3 pr-6 text-violet-400/70">TailwindEnabled</td>
                                     <td class="py-3 pr-6 text-gray-400">true</td>
                                     <td class="py-3 text-gray-400 font-sans text-sm">Enable/disable the build target</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-3 pr-6 text-amber-400/70">TailwindMinify</td>
+                                    <td class="py-3 pr-6 text-violet-400/70">TailwindMinify</td>
                                     <td class="py-3 pr-6 text-gray-400">$(Optimize)</td>
                                     <td class="py-3 text-gray-400 font-sans text-sm">Minify output (auto in Release)</td>
                                 </tr>
@@ -171,7 +171,7 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                 <div id="csharp-options" class="mb-12">
                     <h3 class="text-xl font-semibold mb-4">C# Options</h3>
                     <p class="text-sm text-gray-400 mb-4">
-                        Configure the runtime hosted service via the <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">UseTailwind</code> overload:
+                        Configure the runtime hosted service via the <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">UseTailwind</code> overload:
                     </p>
                     <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] overflow-hidden">
                         <div class="flex items-center gap-2 px-4 py-2 border-b border-white/[0.04]">
@@ -180,7 +180,7 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                             <span class="w-2 h-2 rounded-full bg-white/10"></span>
                             <span class="ml-2 text-[11px] text-gray-500 font-mono">Program.cs</span>
                         </div>
-                        <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm">builder.<span class="text-amber-400">UseTailwind</span>(options <span class="text-violet-400">=&gt;</span>
+                        <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm">builder.<span class="text-violet-400">UseTailwind</span>(options <span class="text-violet-400">=&gt;</span>
 {
     options.InputFile = <span class="text-green-400">"Styles/app.css"</span>;
     options.OutputFile = <span class="text-green-400">"wwwroot/css/tailwind.css"</span>;
@@ -194,7 +194,7 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                 <div id="appsettings" class="mb-12">
                     <h3 class="text-xl font-semibold mb-4">appsettings.json</h3>
                     <p class="text-sm text-gray-400 mb-4">
-                        Options are also bound from the <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">Tailwind</code> configuration section:
+                        Options are also bound from the <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">Tailwind</code> configuration section:
                     </p>
                     <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] overflow-hidden">
                         <div class="flex items-center gap-2 px-4 py-2 border-b border-white/[0.04]">
@@ -204,10 +204,10 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                             <span class="ml-2 text-[11px] text-gray-500 font-mono">appsettings.json</span>
                         </div>
                         <pre class="px-5 py-4 overflow-x-auto"><code class="font-mono text-sm">{
-  <span class="text-amber-400">"Tailwind"</span>: {
-    <span class="text-amber-400">"InputFile"</span>: <span class="text-green-400">"Styles/app.css"</span>,
-    <span class="text-amber-400">"OutputFile"</span>: <span class="text-green-400">"wwwroot/css/tailwind.css"</span>,
-    <span class="text-amber-400">"TailwindVersion"</span>: <span class="text-green-400">"4.1.18"</span>
+  <span class="text-violet-400">"Tailwind"</span>: {
+    <span class="text-violet-400">"InputFile"</span>: <span class="text-green-400">"Styles/app.css"</span>,
+    <span class="text-violet-400">"OutputFile"</span>: <span class="text-green-400">"wwwroot/css/tailwind.css"</span>,
+    <span class="text-violet-400">"TailwindVersion"</span>: <span class="text-green-400">"4.1.18"</span>
   }
 }</code></pre>
                     </div>
@@ -221,39 +221,39 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                 <div class="space-y-8">
                     <div>
                         <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <span class="w-7 h-7 rounded-lg bg-amber-400/10 flex items-center justify-center text-xs font-bold text-amber-400">B</span>
+                            <span class="w-7 h-7 rounded-lg bg-violet-400/10 flex items-center justify-center text-xs font-bold text-violet-400">B</span>
                             At Build Time
                         </h3>
                         <div class="pl-9 space-y-2 text-sm text-gray-400 leading-relaxed">
                             <p>MSBuild targets run <strong class="text-gray-300">before</strong> compilation:</p>
                             <ol class="list-decimal list-inside space-y-1.5 pl-1">
                                 <li>Detect your OS and CPU architecture</li>
-                                <li>Download the Tailwind CLI binary to <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">~/.tailwindblazor/cli/&lt;version&gt;/</code> (cached — only on first build)</li>
-                                <li>Run <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">tailwindcss -i &lt;input&gt; -o &lt;output&gt;</code> to generate the CSS</li>
-                                <li>In Release mode, <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">--minify</code> is applied automatically</li>
+                                <li>Download the Tailwind CLI binary to <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">~/.tailwindblazor/cli/&lt;version&gt;/</code> (cached — only on first build)</li>
+                                <li>Run <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">tailwindcss -i &lt;input&gt; -o &lt;output&gt;</code> to generate the CSS</li>
+                                <li>In Release mode, <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">--minify</code> is applied automatically</li>
                             </ol>
                         </div>
                     </div>
 
                     <div>
                         <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <span class="w-7 h-7 rounded-lg bg-amber-400/10 flex items-center justify-center text-xs font-bold text-amber-400">D</span>
+                            <span class="w-7 h-7 rounded-lg bg-violet-400/10 flex items-center justify-center text-xs font-bold text-violet-400">D</span>
                             At Dev Time
                         </h3>
                         <div class="pl-9 space-y-2 text-sm text-gray-400 leading-relaxed">
                             <p>When the environment is <strong class="text-gray-300">Development</strong>, the hosted service:</p>
                             <ol class="list-decimal list-inside space-y-1.5 pl-1">
                                 <li>Ensures the CLI is downloaded</li>
-                                <li>Starts <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">tailwindcss --watch</code> as a background process</li>
-                                <li>Streams CLI output to <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">ILogger</code></li>
+                                <li>Starts <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">tailwindcss --watch</code> as a background process</li>
+                                <li>Streams CLI output to <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">ILogger</code></li>
                                 <li>Kills the entire process tree on application shutdown</li>
                             </ol>
                         </div>
                     </div>
 
-                    <div class="p-5 rounded-xl bg-amber-400/[0.06] border border-amber-400/[0.12]">
+                    <div class="p-5 rounded-xl bg-violet-400/[0.06] border border-violet-400/[0.12]">
                         <p class="text-sm text-gray-300">
-                            <span class="font-semibold text-amber-400">Build vs Runtime:</span>
+                            <span class="font-semibold text-violet-400">Build vs Runtime:</span>
                             MSBuild targets handle CSS generation for <code class="font-mono text-xs px-1 py-0.5 rounded bg-white/[0.06]">dotnet build</code> and
                             <code class="font-mono text-xs px-1 py-0.5 rounded bg-white/[0.06]">dotnet publish</code>.
                             The hosted service adds watch mode for live development. Both mechanisms work independently — you get CSS generation
@@ -283,27 +283,27 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                             <tr class="border-b border-white/[0.04]">
                                 <td class="py-3 pr-8 text-gray-300 font-sans text-sm">Windows</td>
                                 <td class="py-3 pr-8 text-gray-400">x64</td>
-                                <td class="py-3 text-amber-400/70">tailwindcss-windows-x64.exe</td>
+                                <td class="py-3 text-violet-400/70">tailwindcss-windows-x64.exe</td>
                             </tr>
                             <tr class="border-b border-white/[0.04]">
                                 <td class="py-3 pr-8 text-gray-300 font-sans text-sm">macOS</td>
                                 <td class="py-3 pr-8 text-gray-400">x64</td>
-                                <td class="py-3 text-amber-400/70">tailwindcss-macos-x64</td>
+                                <td class="py-3 text-violet-400/70">tailwindcss-macos-x64</td>
                             </tr>
                             <tr class="border-b border-white/[0.04]">
                                 <td class="py-3 pr-8 text-gray-300 font-sans text-sm">macOS</td>
                                 <td class="py-3 pr-8 text-gray-400">ARM64</td>
-                                <td class="py-3 text-amber-400/70">tailwindcss-macos-arm64</td>
+                                <td class="py-3 text-violet-400/70">tailwindcss-macos-arm64</td>
                             </tr>
                             <tr class="border-b border-white/[0.04]">
                                 <td class="py-3 pr-8 text-gray-300 font-sans text-sm">Linux</td>
                                 <td class="py-3 pr-8 text-gray-400">x64</td>
-                                <td class="py-3 text-amber-400/70">tailwindcss-linux-x64</td>
+                                <td class="py-3 text-violet-400/70">tailwindcss-linux-x64</td>
                             </tr>
                             <tr>
                                 <td class="py-3 pr-8 text-gray-300 font-sans text-sm">Linux</td>
                                 <td class="py-3 pr-8 text-gray-400">ARM64</td>
-                                <td class="py-3 text-amber-400/70">tailwindcss-linux-arm64</td>
+                                <td class="py-3 text-violet-400/70">tailwindcss-linux-arm64</td>
                             </tr>
                         </tbody>
                     </table>
@@ -319,16 +319,16 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                         <h4 class="font-semibold mb-2">CLI download fails</h4>
                         <p class="text-sm text-gray-400 leading-relaxed">
                             Check your internet connection and firewall settings. The CLI is downloaded from
-                            <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">github.com/tailwindlabs/tailwindcss/releases</code>.
-                            You can also download it manually and set <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">TailwindCliPath</code> in your .csproj
-                            or <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">options.CliPath</code> in C#.
+                            <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">github.com/tailwindlabs/tailwindcss/releases</code>.
+                            You can also download it manually and set <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">TailwindCliPath</code> in your .csproj
+                            or <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">options.CliPath</code> in C#.
                         </p>
                     </div>
 
                     <div class="p-5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
                         <h4 class="font-semibold mb-2">CSS is empty or missing classes</h4>
                         <p class="text-sm text-gray-400 leading-relaxed">
-                            Tailwind v4 scans your project files automatically. Make sure your <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">.razor</code> files
+                            Tailwind v4 scans your project files automatically. Make sure your <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">.razor</code> files
                             are in the project directory. If using a non-standard structure, check that the CLI can find your content files.
                         </p>
                     </div>
@@ -336,16 +336,16 @@ builder.<span class="text-amber-400">UseTailwind</span>();</code></pre>
                     <div class="p-5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
                         <h4 class="font-semibold mb-2">Watch mode not starting</h4>
                         <p class="text-sm text-gray-400 leading-relaxed">
-                            The hosted service only runs when <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">ASPNETCORE_ENVIRONMENT=Development</code>.
-                            Make sure you're running with <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet watch</code> or
-                            <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet run</code> in development mode.
+                            The hosted service only runs when <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">ASPNETCORE_ENVIRONMENT=Development</code>.
+                            Make sure you're running with <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet watch</code> or
+                            <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet run</code> in development mode.
                         </p>
                     </div>
 
                     <div class="p-5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
                         <h4 class="font-semibold mb-2">Want to disable Tailwind for a specific build?</h4>
                         <p class="text-sm text-gray-400 leading-relaxed">
-                            Pass <code class="font-mono text-xs text-amber-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet build -p:TailwindEnabled=false</code>
+                            Pass <code class="font-mono text-xs text-violet-400/60 px-1 py-0.5 rounded bg-white/[0.04]">dotnet build -p:TailwindEnabled=false</code>
                             to skip CSS generation entirely.
                         </p>
                     </div>
