@@ -7,13 +7,14 @@
     <PackageId>TailwindBlazor</PackageId>
     <Version>0.1.0</Version>
     <Authors>luissena</Authors>
-    <Description>Zero-config Tailwind CSS v4 integration for Blazor. Auto-downloads the CLI, generates CSS at build time via MSBuild targets, and runs watch mode in development.</Description>
-    <PackageTags>blazor;tailwind;tailwindcss;css;dotnet;aspnetcore;blazor-server;blazor-wasm;csharp</PackageTags>
+    <Description>Zero-config Tailwind CSS v4 integration for Blazor. Auto-downloads the standalone Tailwind CLI binary (no Node.js required), generates CSS at build time via MSBuild targets, and runs watch mode in development. Works with Blazor Server, Blazor WebAssembly, and Blazor Web App on .NET 8+. Supports Windows, macOS, and Linux.</Description>
+    <PackageTags>blazor;tailwind;tailwindcss;tailwind-css;css;dotnet;aspnetcore;blazor-server;blazor-wasm;blazor-webapp;csharp;msbuild;razor;dotnet-tool;styling</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/luissena/TailwindBlazor</PackageProjectUrl>
+    <PackageProjectUrl>https://tailwind-blazor.com</PackageProjectUrl>
     <RepositoryUrl>https://github.com/luissena/TailwindBlazor</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>v0.1.0: Initial release. Auto CLI download, MSBuild integration, watch mode hosted service, zero-config defaults.</PackageReleaseNotes>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 

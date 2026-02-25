@@ -1,0 +1,22 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "TailwindBlazor",
+  "description": "Zero-config Tailwind CSS v4 integration for Blazor. Auto-downloads the CLI, generates CSS at build time via MSBuild, and runs watch mode in development. No Node.js required.",
+  "branch": "main",
+  "folders": ["docs", "samples"],
+  "excludeFolders": [
+    "src",
+    "site",
+    "node_modules",
+    ".github",
+    ".claude"
+  ],
+  "excludeFiles": ["LICENSE", "CHANGELOG.md"],
+  "rules": [
+    "Always register TailwindBlazor via builder.UseTailwind() in Program.cs, not by manually adding services",
+    "Create a Styles/app.css file with @import \"tailwindcss\" as the CSS entry point before building",
+    "Reference the generated CSS with <link rel=\"stylesheet\" href=\"css/tailwind.css\" /> in App.razor or _Host.cshtml",
+    "Do NOT install Node.js or npm — TailwindBlazor downloads the standalone Tailwind CLI binary automatically",
+    "Tailwind CSS v4 does NOT require a tailwind.config.js file — it detects content files automatically"
+  ]
+}

@@ -1,0 +1,256 @@
+# TailwindBlazor
+
+> Zero-config Tailwind CSS v4 integration for Blazor. Install the NuGet package, call `builder.UseTailwind()`, and you're done. The Tailwind CLI downloads automatically, CSS compiles at build time via MSBuild targets, and watch mode runs during development. No Node.js, no npm, no manual setup required. Works with Blazor Server, Blazor WebAssembly, and Blazor Web App on .NET 8+.
+
+## Getting Started
+
+TailwindBlazor integrates Tailwind CSS v4 into your Blazor app with zero external dependencies. No Node.js, no npm, no manual CLI installs.
+
+### Installation
+
+```sh
+dotnet add package TailwindBlazor
+```
+
+### Setup (3 steps)
+
+#### 1. Create the CSS entry point
+
+Create a file at `Styles/app.css` in your project root:
+
+```css
+@import "tailwindcss";
+```
+
+#### 2. Register the service
+
+Add one line to your `Program.cs`:
+
+```csharp
+using TailwindBlazor;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.UseTailwind();
+```
+
+#### 3. Reference the generated CSS
+
+Add the stylesheet link in your `App.razor` or `_Host.cshtml`:
+
+```html
+<link rel="stylesheet" href="css/tailwind.css" />
+```
+
+That's it. Use Tailwind classes in any `.razor` file:
+
+```html
+<h1 class="text-3xl font-bold text-gray-900">Hello, TailwindBlazor!</h1>
+```
+
+### What happens automatically
+
+- **Build time**: MSBuild targets download the Tailwind CLI (cached at `~/.tailwindblazor/cli/`) and compile CSS before your project builds.
+- **Dev time**: A hosted service runs `tailwindcss --watch` in the background for instant CSS rebuilds when `ASPNETCORE_ENVIRONMENT=Development`.
+- **Publish**: CSS is minified automatically in Release configuration.
+
+### Minimal complete example
+
+```csharp
+// Program.cs
+using TailwindBlazor;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.UseTailwind();
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+var app = builder.Build();
+app.UseAntiforgery();
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+app.Run();
+```
+
+### Compatibility
+
+- .NET 8.0+
+- Blazor Server, Blazor WebAssembly (hosted), Blazor Web App
+- Tailwind CSS v4
+- Windows (x64), macOS (x64, ARM64), Linux (x64, ARM64)
+
+## Configuration
+
+TailwindBlazor works out of the box with sensible defaults. Everything is overridable through three methods: MSBuild properties, C# options, or appsettings.json.
+
+### MSBuild Properties
+
+Set these in your `.csproj` to control build-time behavior:
+
+```xml
+<PropertyGroup>
+  <TailwindVersion>4.1.18</TailwindVersion>
+  <TailwindInputFile>Styles/app.css</TailwindInputFile>
+  <TailwindOutputFile>wwwroot/css/tailwind.css</TailwindOutputFile>
+  <TailwindEnabled>true</TailwindEnabled>
+  <TailwindMinify>false</TailwindMinify>
+</PropertyGroup>
+```
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| `TailwindVersion` | `4.1.18` | Tailwind CLI version to download |
+| `TailwindInputFile` | `Styles/app.css` | CSS entry point relative to project root |
+| `TailwindOutputFile` | `wwwroot/css/tailwind.css` | Generated CSS output path |
+| `TailwindEnabled` | `true` | Enable/disable the build target |
+| `TailwindMinify` | `$(Optimize)` | Minify output (auto in Release) |
+
+### C# Options
+
+Configure the runtime hosted service via the `UseTailwind` overload in `Program.cs`:
+
+```csharp
+builder.UseTailwind(options =>
+{
+    options.InputFile = "Styles/app.css";
+    options.OutputFile = "wwwroot/css/tailwind.css";
+    options.CliPath = "/custom/path/to/tailwindcss";
+    options.TailwindVersion = "4.1.18";
+});
+```
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `InputFile` | `string` | `"Styles/app.css"` | CSS entry point relative to content root |
+| `OutputFile` | `string` | `"wwwroot/css/tailwind.css"` | Generated CSS output path |
+| `CliPath` | `string?` | `null` | Custom path to Tailwind CLI binary (overrides auto-download) |
+| `TailwindVersion` | `string` | `"4.1.18"` | Tailwind CLI version to download |
+
+### appsettings.json
+
+Options are also bound from the `Tailwind` configuration section:
+
+```json
+{
+  "Tailwind": {
+    "InputFile": "Styles/app.css",
+    "OutputFile": "wwwroot/css/tailwind.css",
+    "TailwindVersion": "4.1.18"
+  }
+}
+```
+
+### Priority order
+
+When the same option is set in multiple places, C# options take highest priority, then appsettings.json, then MSBuild defaults.
+
+### Disable Tailwind for a specific build
+
+```sh
+dotnet build -p:TailwindEnabled=false
+```
+
+### Custom CLI path
+
+If you have a pre-downloaded Tailwind CLI binary, skip auto-download:
+
+```csharp
+builder.UseTailwind(o => o.CliPath = "/usr/local/bin/tailwindcss");
+```
+
+## How It Works
+
+TailwindBlazor has two independent mechanisms: MSBuild targets for build-time CSS generation, and a hosted service for dev-time watch mode.
+
+### At Build Time (MSBuild)
+
+MSBuild targets run **before** compilation:
+
+1. Detect your OS and CPU architecture
+2. Download the Tailwind CLI binary to `~/.tailwindblazor/cli/<version>/` (cached — only on first build)
+3. Run `tailwindcss -i <input> -o <output>` to generate the CSS
+4. In Release mode, `--minify` is applied automatically
+
+**You get CSS generation even without calling `UseTailwind()` in C#.** The MSBuild targets work independently of the runtime service.
+
+### At Dev Time (Hosted Service)
+
+When `ASPNETCORE_ENVIRONMENT=Development` and you call `builder.UseTailwind()`, the hosted service:
+
+1. Ensures the CLI is downloaded (same cache as MSBuild)
+2. Starts `tailwindcss --watch` as a background process
+3. Streams CLI output to `ILogger` (debug-level for stdout, warning-level for stderr)
+4. Kills the entire process tree on application shutdown
+
+### Supported Platforms
+
+| OS | Architecture | CLI Binary |
+|----|-------------|------------|
+| Windows | x64 | `tailwindcss-windows-x64.exe` |
+| macOS | x64 | `tailwindcss-macos-x64` |
+| macOS | ARM64 | `tailwindcss-macos-arm64` |
+| Linux | x64 | `tailwindcss-linux-x64` |
+| Linux | ARM64 | `tailwindcss-linux-arm64` |
+
+### Tailwind CSS v4 Content Detection
+
+Tailwind CSS v4 automatically scans your project files for class usage. You do **not** need a `tailwind.config.js` file.
+
+## API Reference
+
+### UseTailwind (Extension Method)
+
+```csharp
+public static WebApplicationBuilder UseTailwind(
+    this WebApplicationBuilder builder,
+    Action<TailwindOptions>? configure = null)
+```
+
+Registers the `TailwindHostedService` and binds `TailwindOptions` from the `"Tailwind"` configuration section.
+
+### TailwindOptions (Class)
+
+```csharp
+public class TailwindOptions
+{
+    public string InputFile { get; set; } = "Styles/app.css";
+    public string OutputFile { get; set; } = "wwwroot/css/tailwind.css";
+    public string? CliPath { get; set; }
+    public string TailwindVersion { get; set; } = "4.1.18";
+}
+```
+
+### TailwindHostedService
+
+An `IHostedService` that runs the Tailwind CSS CLI in watch mode during development. Only active when `IHostEnvironment.IsDevelopment()` returns `true`. Registered automatically by `UseTailwind()`.
+
+### TailwindCliDownloader (Static Class)
+
+```csharp
+public static string GetCacheDirectory(string version)
+public static string GetPlatformIdentifier()
+public static string GetBinaryName(string platform)
+public static string GetDownloadUrl(string version, string binaryName)
+public static string ResolveCliPath(TailwindOptions options)
+public static async Task EnsureCliAsync(TailwindOptions options, ILogger? logger = null, CancellationToken cancellationToken = default)
+```
+
+## Troubleshooting
+
+### CLI download fails
+
+Check your internet connection and firewall settings. The CLI is downloaded from `github.com/tailwindlabs/tailwindcss/releases`. Download manually and set `options.CliPath` or `TailwindCliPath` MSBuild property.
+
+### CSS is empty or missing classes
+
+Tailwind CSS v4 scans project files automatically. Ensure `.razor` files are inside the project directory. No `tailwind.config.js` needed.
+
+### Watch mode not starting
+
+The hosted service only runs when `ASPNETCORE_ENVIRONMENT=Development`. Use `dotnet watch` or `dotnet run --environment Development`. Verify `builder.UseTailwind()` is in `Program.cs`.
+
+### Disable for a build
+
+```sh
+dotnet build -p:TailwindEnabled=false
+```

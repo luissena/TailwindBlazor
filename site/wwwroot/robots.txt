@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tailwind-blazor.com/sitemap.xml
+
+# AI documentation
+LLMs-Txt: https://tailwind-blazor.com/llms.txt

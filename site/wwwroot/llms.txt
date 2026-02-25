@@ -1,0 +1,20 @@
+# TailwindBlazor
+
+> Zero-config Tailwind CSS v4 integration for Blazor. Install the NuGet package, call `builder.UseTailwind()`, and you're done. The Tailwind CLI downloads automatically, CSS compiles at build time via MSBuild targets, and watch mode runs during development. No Node.js, no npm, no manual setup required. Works with Blazor Server, Blazor WebAssembly, and Blazor Web App on .NET 8+.
+
+## Docs
+
+- [Getting Started](https://raw.githubusercontent.com/luissena/TailwindBlazor/main/docs/getting-started.md): Installation and first steps
+- [Configuration](https://raw.githubusercontent.com/luissena/TailwindBlazor/main/docs/configuration.md): MSBuild properties, C# options, and appsettings.json
+- [How It Works](https://raw.githubusercontent.com/luissena/TailwindBlazor/main/docs/how-it-works.md): Build-time and dev-time architecture
+- [API Reference](https://raw.githubusercontent.com/luissena/TailwindBlazor/main/docs/api-reference.md): Full public API surface
+- [Troubleshooting](https://raw.githubusercontent.com/luissena/TailwindBlazor/main/docs/troubleshooting.md): Common issues and fixes
+
+## Examples
+
+- [Sample Blazor App](https://raw.githubusercontent.com/luissena/TailwindBlazor/main/samples/SampleBlazorApp/Program.cs): Complete working example with Blazor Server
+
+## Optional
+
+- [README](https://raw.githubusercontent.com/luissena/TailwindBlazor/main/README.md): Project overview and badges
+- [LICENSE](https://raw.githubusercontent.com/luissena/TailwindBlazor/main/LICENSE): MIT License
