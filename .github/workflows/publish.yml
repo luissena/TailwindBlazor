@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      packages: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
@@ -16,6 +17,7 @@ jobs:
           dotnet-version: 8.0.x
       - run: dotnet pack src/TailwindBlazor/TailwindBlazor.csproj -c Release -o ./artifacts
       - run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      - run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/luissena/index.json --skip-duplicate
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
