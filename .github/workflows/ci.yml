@@ -17,4 +17,4 @@ jobs:
       - run: dotnet build src/TailwindBlazor/TailwindBlazor.csproj -c Release
       - run: dotnet pack src/TailwindBlazor/TailwindBlazor.csproj -c Release --no-build
       - run: dotnet pack templates/TailwindBlazor.Templates.csproj -c Release
-      - run: dotnet publish site/Site.csproj -c Release -o site-output
+      # - run: dotnet publish site/Site.csproj -c Release -o site-output
